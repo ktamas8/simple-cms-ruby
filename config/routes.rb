@@ -1,15 +1,25 @@
 Rails.application.routes.draw do
-  get 'pages/index'
-  get 'pages/show'
-  get 'pages/new'
-  get 'pages/edit'
-  get 'pages/delete'
-  get 'subjects/index'
-  get 'subjects/show'
-  get 'subjects/new'
-  get 'subjects/edit'
-  get 'subjects/delete'
   root 'demo#index'
+  
+  resources :subjects do
+    member do
+      get :delete
+    end
+  end
+# ez ua. mint az alábbiak
+
+#  get 'subjects/index'
+#  get 'subjects/show'
+#  get 'subjects/new'
+#  get 'subjects/edit'
+#  get 'subjects/delete'
+
+  resources :pages do
+    member do
+      get :delete
+    end
+  end
+
   get 'demo/index'
   get 'demo/hello'
   get 'demo/about'

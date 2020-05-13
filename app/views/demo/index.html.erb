@@ -4,6 +4,13 @@
 <a href="/demo/hello">Hello page 1</a>
 <% '<a href="/demo/hello">Hello page 2</a>' %>
 
+
+<ul class="link-list">
+    <li><%= link_to('Hello Page', { action: 'hello' }) %></li>
+    <li><%= link_to('Hello with params', { action: 'hello', page:5, id: 20 }) %></li>
+    <li><%= link_to('All subjects', subjects_path) %></li>
+</ul>
+
 <% target = 'world' %>
 <%= "Hello #{target}!" %>
 

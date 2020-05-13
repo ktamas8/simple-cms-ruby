@@ -7,9 +7,13 @@ class DemoController < ApplicationController
     #redirect_to('http://sg.hu')
     
     @target = 'world'
-    
     @id = params['id']
     @page = params[:page]
     
+  end
+  
+  def about
+  end
+  def contact
   end
 end
